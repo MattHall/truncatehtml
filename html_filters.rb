@@ -1,6 +1,7 @@
 # encoding: utf-8
 require 'rubygems'
 require 'nokogiri'
+require "iconv"
 
 module Liquid
   module StandardFilters
