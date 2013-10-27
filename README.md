@@ -10,7 +10,7 @@ If you're using Jekyll, add the html_filters.rb file to your _plugins directory 
 
 ## How it works
 
-Given a snippet of HTML, we use Nokogiri to parse it into a tree. THis takes care of all of the messiness of dealing with HTML, and gives us back a tree of nodes representing the parsed snippet.
+Given a snippet of HTML, we use Nokogiri to parse it into a tree. This takes care of all of the messiness of dealing with HTML, and gives us back a tree of nodes representing the parsed snippet.
 
 Now that we have the tree of nodes, we can traverse it depth-first. All text nodes are leaf nodes, so when we encounter one, we can count the length of the text.
 
