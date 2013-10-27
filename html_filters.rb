@@ -7,7 +7,7 @@ module Jekyll
   module TruncateHTMLFilter
     
     def truncatehtml(raw, max_length = 15, continuation_string = "...")
-     doc = Nokogiri::HTML(raw.encode('UTF-8', :invalid => :replace, :undef => :replace, :replace => '')) 
+     doc = Nokogiri::HTML.fragment(raw.encode('UTF-8', :invalid => :replace, :undef => :replace, :replace => ''))
       current_length = 0;
       deleting = false
       to_delete = []
