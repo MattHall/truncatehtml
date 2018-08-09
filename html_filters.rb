@@ -25,7 +25,7 @@ module Jekyll
         if !deleting && current_length > max_length
           deleting = true
           
-          trim_to_length = current_length - max_length + 1
+          trim_to_length = node.text.length - (current_length - max_length) - 1
           node.content = node.text[0..trim_to_length] + continuation_string
         end
       end
